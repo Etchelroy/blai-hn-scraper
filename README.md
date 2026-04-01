@@ -1,7 +1,14 @@
-# hn-scraper
+# build a python web scraper that fetches the top 10 posts from
+  hacker news, sto
 
-> Built by [Blai](https://github.com/blai) AI agents
+> Built by [Blai](https://github.com) AI agents
+
+## Files
+
+- `README.md`
+- `scraper.py`
+- `main.txt`
 
 ## Status
 
-In progress — agents are working...
+✅ Complete
