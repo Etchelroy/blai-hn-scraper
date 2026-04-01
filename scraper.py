@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 import sqlite3
 from datetime import datetime, timezone
 import sys
@@ -22,6 +21,12 @@ def init_db(conn):
     conn.commit()
 
 def fetch_hn_posts():
+    try:
+        from bs4 import BeautifulSoup
+    except ModuleNotFoundError:
+        print("Error: BeautifulSoup4 (bs4) is not installed. Install it with: pip install beautifulsoup4")
+        return []
+    
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
